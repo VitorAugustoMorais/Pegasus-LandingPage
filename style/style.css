@@ -13,13 +13,13 @@
 }
 
 header {
-    height: 8vh;
+    height: 6rem;
     background-color: var(--blue-nav);
     color: var(--white-one);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.3rem 6vh;
+    padding: 0 2rem;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -43,8 +43,8 @@ header {
 }
 
 .hamburger-menu:hover {
-    border-radius: 999px;
     background-color: var(--blue-one);
+    border-radius: 999px;
 }
 
 #home {
@@ -113,13 +113,12 @@ header {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: .90rem;
+        font-size: 1.5rem;
     }
 
     .hamburger-menu {
-        height: 2rem;
+        height: 3.5rem;
         width: auto;
-        cursor: pointer;
         display: inline;
     }
 
@@ -128,8 +127,8 @@ header {
     }
 
     .slogan{
-        font-size: 1rem;
-        padding: 50px 5vh;
+        font-size: 1.4rem;
+        padding: 60px 1.5vh;
         text-align: center;
     }
 
