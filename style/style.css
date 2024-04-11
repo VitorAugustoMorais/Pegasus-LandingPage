@@ -1,0 +1,136 @@
+:root {
+    --white-one: #fff;
+    --white-two: #F5F5F7;
+    --blue-one: #578AA3;
+    --blue-nav: #001a33e0;
+    --blue-gradient: linear-gradient(#001a33, #001a33fc);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 8vh;
+    background-color: var(--blue-nav);
+    color: var(--white-one);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 6vh;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-menu {
+    display: none;
+    text-decoration: none;
+    color: var(--white-one);
+    padding: 1rem;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-menu:hover {
+    border-radius: 999px;
+    background-color: var(--blue-one);
+}
+
+#home {
+    background-image: var(--blue-gradient);
+    height: 100vh;
+    width: auto;
+    padding-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 50vh;
+    width: auto;
+}
+
+.slogan{
+    color: var(--white-one);
+    padding: 80px 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#servicos {
+    background-color: var(--white-two);
+    height: 80vh;
+    width: auto;
+}
+
+#sobre {
+    background-color: var(--blue-one);
+    height: 80vh;
+    width: auto;
+}
+
+#contato {
+    background-color: var(--white-two);
+    height: 80vh;
+    width: auto;
+}
+
+@media (min-width: 1201px) {}
+
+@media (max-width: 1200px) and (min-width: 1025px) {}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .section-menu {
+        display: inline;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+    h1 {
+        font-size: .90rem;
+    }
+
+    .section-menu {
+        display: inline;
+        font-size: .8rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: .90rem;
+    }
+
+    .hamburger-menu {
+        height: 2rem;
+        width: auto;
+        cursor: pointer;
+        display: inline;
+    }
+
+    .logo {
+        height: 30vh;
+    }
+
+    .slogan{
+        font-size: 1rem;
+        padding: 50px 5vh;
+        text-align: center;
+    }
+
+}
