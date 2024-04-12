@@ -1,12 +1,12 @@
 const menuHidden = document.getElementById('menuHidden')
-const btnMenu = document.getElementById('btnMenu')
+const btnMenuOpen = document.getElementById('btnMenuOpen')
 
-function menuHamburger() {
-    btnMenu.style.display = 'none'
-    menuHidden.style.display = "inline"
+function openMenu() {
+    btnMenuOpen.className = 'hide'
+    menuHidden.className = "show"
 }
 
-function fecharMenu() {
-    btnMenu.style.display = "inline"
-    menuHidden.style.display = 'none'
+function closeMenu() {
+    btnMenuOpen.className = "show"
+    menuHidden.className = 'hide'
 }

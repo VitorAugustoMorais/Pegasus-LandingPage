@@ -4,6 +4,7 @@
     --white-one: #fff;
     --white-two: #F5F5F7;
     --blue-one: #578AA3;
+    --blue-two: #001a33;
     --blue-nav: #001a33e0;
     --blue-gradient: linear-gradient(#001a33, #001a33fc);
 
@@ -35,23 +36,12 @@ header {
 }
 
 nav {
-    /* background-color: var(--blue-one); */
     position: fixed;
     top: 0;
     right: 0;
+    height: 5rem;
     display: flex;
-    align-items: start;
-    justify-content: end;
-    padding: .7rem 2rem 0 0;
-    border-radius: 0 0 0 2rem;
-
-    /* height: 100%; */
-    /* width: 100%; */
-}
-
-.menu {
-    display: flex;
-    justify-content: space-between;
+    padding: 0 2rem 0 0;
 }
 
 .section-menu {
@@ -67,22 +57,16 @@ nav {
     border-bottom: solid 2px;
 }
 
-#btnMenu {
+#btnMenuOpen {
     cursor: pointer;
     display: none;
     margin: auto 0;
-}
-
-#btnMenu:hover {
-    background-color: var(--blue-one);
-    border-radius: 999px;
 }
 
 #btnCloseMenu {
     cursor: pointer;
     height: 2em;
     width: auto;
-    /* margin: 2rem auto auto 14rem; */
     margin: 1.8rem 3rem 0 6.5rem;
 }
 
@@ -98,19 +82,19 @@ nav {
     font-weight: bold;
     text-decoration: none;
     color: var(--white-one);
-    /* padding: .5rem; */
     margin: 1.5rem;
 }
 
 #menuHidden {
     position: fixed;
-    top:0;
+    top: 0;
     right: 0;
-    display: none;
     background-color: var(--blue-one);
     height: 27rem;
     width: auto;
     border-radius: 0 0 0 2rem;
+    border-bottom: solid;
+    border-left: solid;
 }
 
 
@@ -156,10 +140,24 @@ nav {
     width: auto;
 }
 
+/* FOOTER */
+footer{
+    height: 2rem;
+    background-color: var(--blue-two);
+    color: var(--white-one);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .6rem;
+    font-family: var(--font-roboto);
+}
 
-/* UNIVERSAL  */
-.inline {
+/* UNIVERSAL */
+.show{
     display: inline;
+}
+.hide {
+    display: none;
 }
 
 @media (min-width: 1201px) {}
@@ -173,6 +171,7 @@ nav {
     }
 }
 
+/* TABLET */
 @media (max-width: 768px) and (min-width: 481px) {
     h1 {
         font-size: .90rem;
@@ -182,19 +181,22 @@ nav {
         display: inline;
         font-size: .8rem;
     }
+
+    #btnMenuOpen {
+        display: none;
+    }
 }
 
-
+/* MOBILE */
 @media (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
     }
 
-    #btnMenu {
-        height: 3.5rem;
+    #btnMenuOpen {
+        height: 3rem;
         width: auto;
         display: inline;
-        display: none;
     }
 
     .logo {
@@ -207,8 +209,5 @@ nav {
         text-align: center;
     }
 
-    #btnMenu {
-        display: inline;
-    }
-
 }
+
